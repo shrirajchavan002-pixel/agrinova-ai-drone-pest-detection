@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"> <!-- Light Background for clean look -->
+
+    <!-- Section for Drone Image -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Drone Image Analysis"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#2E7D32"
+        android:layout_marginBottom="10dp"/>
+
+    <ImageView
+        android:id="@+id/imageGallery"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        android:background="#DDDDDD"
+        android:elevation="4dp"/>
+
+    <!-- Loading Indicator (Analysis Feel) -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:indeterminate="true"
+        android:visibility="gone" /> <!-- Hidden by default -->
+
+    <!-- Result Layout Container (Java uses this ID) -->
+    <LinearLayout
+        android:id="@+id/resultLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/white"
+        android:elevation="2dp">
+
+        <!-- Battery Status -->
+        <TextView
+            android:id="@+id/batteryText"
+            android:text="Drone Battery : 85%"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Crop Health Analysis -->
+        <TextView
+            android:id="@+id/cropStatus"
+            android:text="Crop Health : --"
+            android:textSize="17sp"
+            android:textColor="#2E7D32"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/damageText"
+            android:text="Damage : --"
+            android:textSize="17sp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/solutionText"
+            android:text="Solution : --"
+            android:textSize="17sp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#D32F2F"/> <!-- Red for solution focus -->
+
+    </LinearLayout>
+
+</LinearLayout>
